@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <NavbarSection />
         <div className="flex">
           <RightSection />
-          <main>{children}</main>
+          <main className="w-11/12 mx-auto">{children}</main>
         </div>
       </body>
     </html>

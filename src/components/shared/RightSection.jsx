@@ -1,15 +1,28 @@
 import { CircleUser } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const RightSection = () => {
   const links = (
     <>
-      <li>Home</li>
-      <li>Project</li>
-      <li>Experience</li>
-      <li>Skills</li>
-      <li>Certification</li>
-      <li>Contact</li>
+      <Link href="/">
+        <li>Home</li>
+      </Link>
+      <Link href="/projects">
+        <li>Project</li>
+      </Link>
+      <Link href="/experience">
+        <li>Experience</li>
+      </Link>
+      <Link href="/skills">
+        <li>Skills</li>
+      </Link>
+      <Link href="/certifications">
+        <li>Certification</li>
+      </Link>
+      <Link href="/contact">
+        <li>Contact</li>
+      </Link>
     </>
   );
   return (
