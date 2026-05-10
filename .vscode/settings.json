@@ -1,0 +1,24 @@
+{
+  "emmet.includeLanguages": {
+    "javascript": "jsx",
+    "javascriptreact": "jsx",
+    "jsx": "jsx"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.localityBonus": true,
+  "editor.inlineSuggest.enabled": true
+}
+
