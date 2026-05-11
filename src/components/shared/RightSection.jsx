@@ -17,7 +17,7 @@ const RightSection = () => {
       <Link href="/skills">
         <li>Skills</li>
       </Link>
-      <Link href="/certifications">
+      <Link href="/certification">
         <li>Certification</li>
       </Link>
       <Link href="/contact">

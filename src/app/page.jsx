@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <TechStackSection />
+      {/* <TechStackSection /> */}
     </div>
   );
 }
