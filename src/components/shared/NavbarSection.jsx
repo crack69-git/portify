@@ -1,3 +1,4 @@
+import { FileDown } from "lucide-react";
 import React from "react";
 
 const NavbarSection = () => {
@@ -95,7 +96,10 @@ const NavbarSection = () => {
               </g>
             </svg>
           </label>
-          <a className="btn btn-ghost bg-green-800 ">Resume</a>
+          <a className="btn btn-ghost bg-green-800 ">
+            <FileDown />
+            Download Resume
+          </a>
         </div>
       </div>
     </div>
