@@ -1,5 +1,9 @@
 import { AtSign, MapPinCheck, Phone, Send } from "lucide-react";
+import Image from "next/image";
 import React from "react";
+// import github from "@/assets/github.jpg";
+import linkedin from "@/assets/linkedin.png";
+import x from "@/assets/x.png";
 
 const page = () => {
   return (
@@ -10,7 +14,7 @@ const page = () => {
         eaque perferendis blanditiis impedit fugiat omnis dolorem. Doloribus
         accusantium veniam deserunt quibusdam cupiditate libero numquam,
       </p>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-3 gap-5">
         <div className="mockup-code w-full col-span-2">
           <div className="pl-10">
             <p>const user = [</p>
@@ -48,6 +52,29 @@ const page = () => {
                 <MapPinCheck />
                 <span className="font-semibold"> Location: </span> New York, USA
               </p>
+            </div>
+            <div>
+              <p className="mt-5 font-bold">Socials:</p>
+              <div className="flex">
+                <div>
+                  <Image
+                    src={linkedin}
+                    alt="LinkedIn"
+                    width={30}
+                    height={30}
+                    className="rounded-full"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src={x}
+                    alt="X"
+                    width={30}
+                    height={30}
+                    className="rounded-full"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
