@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+        "profile": "https://i.ibb.co/21zm6fWh/male1.webp",
+        "name": "Ashutosh Tanchangya",
+        "email":"toshashu123@gmail.com",
+        "Experience":0,
+        "Position":"Frontend Developer",
+        "description": "A passionate developer with a knack for problem-solving and a love for coding. With a Bachelor's degree in Computer Science and Engineering, I have honed my skills in web development, data structures, and algorithms. I thrive on challenges and am always eager to learn and grow in the ever-evolving world of technology.",
+        "skills": [
+            {
+                "name": "HTML",
+                "category": "Frontend"
+            },
+            {
+                "name": "CSS",
+                "category": "Frontend"
+            },
+            {
+                "name": "JavaScript",
+                "category": "Frontend"
+            },
+            {
+                "name": "React",
+                "category": "Framework"
+            },
+            {
+                "name": "Next.js",
+                "category": "Framework"
+            },
+            {
+                "name": "Tailwind CSS",
+                "category": "Framework"
+            },
+            {
+                "name": "Express.js",
+                "category": "Backend"
+            },
+            {
+                "name": "MongoDB Atlas",
+                "category": "Database"
+            },
+            {
+                "name": "BetterAuth",
+                "category": "authentication"
+            },
+            {
+                "name": "C++",
+                "category": "others"
+            }
+        ],
+        "project": [
+            {
+                "id": 1,
+                "ProjectLink":"https://tiles-wgl2.vercel.app/",
+                "ProjectName":"Tiles Gallary",
+                "ProjectDescription":"A visually stunning 3D tile gallery built with Three.js and React, showcasing a dynamic grid of interactive tiles that respond to user interactions, creating an immersive and engaging experience.",
+                "GithubRepo":"https://github.com/crack69-git/tiles",
+                "StackUsed":[
+                    "HTML",
+                    "Tailwind CSS",
+                    "React",
+                    "Next.js",                    
+                    "BetterAuth"
+                ]
+            }
+        ]
+    }
+  ]
+}

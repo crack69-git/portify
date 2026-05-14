@@ -12,6 +12,7 @@ const NavbarSection = () => {
       <li>Contact</li>
     </>
   );
+
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -96,7 +97,11 @@ const NavbarSection = () => {
               </g>
             </svg>
           </label>
-          <a className="btn btn-ghost bg-green-800 ">
+          <a
+            href="/resume.pdf"
+            download="Ashutosh_Tanchangya_Resume.pdf"
+            className="btn btn-ghost bg-green-800 "
+          >
             <FileDown />
             Download Resume
           </a>

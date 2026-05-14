@@ -8,7 +8,14 @@ import linkedin from "@/assets/logo/html.png";
 import codeforces from "@/assets/logo/codeforces.png";
 import codechef from "@/assets/logo/codechef.png";
 import github from "@/assets/logo/github.png";
-const HeroSection = () => {
+const fetchData = async () => {
+  const res = await fetch("http://localhost:3000/data.json");
+  return await res.json();
+};
+const HeroSection = async () => {
+  const data = await fetchData();
+  console.log(data.projects[0].name);
+  const { name, description, profile } = data.projects[0];
   const images = (
     <>
       <div className="border-4 border-gray-700 p-2 rounded-lg mr-3">
@@ -90,17 +97,8 @@ const HeroSection = () => {
             <h1 className="text-9xl font-bold">
               Hello <span className="text-green-600">There!</span>
             </h1>
-            <h3 className="text-6xl font-bold mb-3">
-              I&apos;m Ashutosh Tanchangya
-            </h3>
-            <p className="text-xl text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Doloribus, magni, corrupti esse tempore unde omnis blanditiis
-              nostrum fuga velit reiciendis voluptates natus saepe cum
-              cupiditate molestiae dicta dolores iusto sunt! Beatae quaerat
-              commodi doloribus enim dolorem illo a esse optio laboriosam
-              voluptatum numquam, ad repellendus vel tempore ipsum qui odit?
-            </p>
+            <h3 className="text-6xl font-bold mb-3">I&apos;m {name}</h3>
+            <p className="text-xl text-gray-300">{description}</p>
             <div className="flex gap-4 mt-10">
               <Link href="/projects">
                 <button className="btn btn-success text-black">
@@ -144,14 +142,16 @@ const HeroSection = () => {
                 <div>
                   <p className="text-xl text-gray-400">
                     Projects:{" "}
-                    <span className="text-xl font-bold text-white">5</span>
+                    <span className="text-xl font-bold text-white">
+                      {data.projects[0].project.length}
+                    </span>
                   </p>
                 </div>
                 <div>
                   <p className="text-xl text-gray-400">
                     Experience:{" "}
                     <span className="text-xl font-bold text-white">
-                      3 years
+                      {data.projects[0].Experience} years
                     </span>{" "}
                   </p>
                 </div>
@@ -159,8 +159,7 @@ const HeroSection = () => {
                   <p className="text-xl text-gray-400">
                     Core Skills:{" "}
                     <span className="text-xl font-bold text-white">
-                      Problem Solving, Data Structures, Algorithms, Web
-                      Development
+                      {/* {data.skills.map((skill) => skill.name).join(", ")} */}
                     </span>
                   </p>
                 </div>
@@ -168,7 +167,7 @@ const HeroSection = () => {
                   <p className="text-xl text-gray-400">
                     Position Interested In:{" "}
                     <span className="text-xl font-bold text-white">
-                      Software Engineer
+                      {data.projects[0].Position}
                     </span>
                   </p>
                 </div>

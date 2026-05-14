@@ -1,8 +1,14 @@
 import { CircleUser } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-const RightSection = () => {
+const fetchData = async () => {
+  const res = await fetch("http://localhost:3000/data.json");
+  return await res.json();
+};
+const RightSection = async () => {
+  const data = await fetchData();
+  const profile = data.projects[0];
   const links = (
     <>
       <Link href="/">
@@ -43,12 +49,18 @@ const RightSection = () => {
           ></label>
           <ul className="menu bg-base-200 min-h-full w-80 p-4 gap-4">
             <div className="flex items-center gap-4 pb-5 border-b border-gray-600">
-              <CircleUser className="h-auto w-10" />
+              <Image
+                src={profile.profile}
+                alt="profile"
+                width={50}
+                height={50}
+                className="rounded-full"
+              />
               <div>
                 <p className="text-green-400 font-semibold text-xl">
-                  Ashutosh Tanchangya
+                  {profile.name}
                 </p>
-                <p>toshashu@gmail.com</p>
+                <p>{profile.email}</p>
               </div>
             </div>
             {links}
