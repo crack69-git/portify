@@ -11,9 +11,15 @@ const ExperiencePage = () => {
         </div>
         <h2 className="text-5xl font-bold my-5">My Academic Journey</h2>
         <p className="w-6/12 mb-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est deleniti
-          commodi inventore temporibus aut pariatur nesciunt veniam deserunt
-          veritatis enim!
+          I am currently pursuing my Bachelor of Science in Computer Science &
+          Engineering at Port City International University (PCIU). My academic
+          journey has been marked by a strong commitment to learning and a
+          passion for technology. I have consistently maintained a high CGPA and
+          have been actively involved in various research projects and academic
+          activities. My focus has been on exploring the latest advancements in
+          computer science, particularly in the areas of machine learning and
+          artificial intelligence. I am dedicated to expanding my knowledge and
+          skills to contribute meaningfully to the field of computer science.
         </p>
       </div>
       <div className="flex justify-between items-center mt-5">
@@ -42,19 +48,19 @@ const ExperiencePage = () => {
             <div className="card-body">
               <div className="flex justify-between items-start gap-4">
                 <p className="card-title text-2xl">
-                  Classification of Soild,crop and fertilizers based on their
-                  properties using Machine Learning
+                  Understanding Sentiment in Chatgaiya Dialect: A Comparative
+                  Study of Classical vs SLM Approache
                 </p>
                 <p className="min-w-fit">2026-Present</p>
               </div>
               <p>
-                <span className="font-bold text-lg">Supervisor:</span> Dr. John
-                Doe
+                <span className="font-bold text-lg">
+                  Supervisor: MD. Meharab Hossain
+                </span>{" "}
+                <br></br>Assistant Professor, Department of Computer Science &
+                Engineering<br></br> Port City International University (PCIU)
               </p>
-              <p>
-                A card component has a figure, a body part, and inside body
-                there are title and actions parts
-              </p>
+              <p>Author: MD. Shakil Uddin, MD. Tamim, Ashutosh Tanchangya</p>
               <div className="card-actions justify-between items-center">
                 <div className="flex gap-2 flex-wrap">
                   <p className="badge badge-soft badge-accent">Pytorch</p>

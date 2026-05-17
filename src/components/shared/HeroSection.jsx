@@ -16,6 +16,7 @@ const HeroSection = async () => {
   const data = await fetchData();
   console.log(data.projects[0].name);
   const { name, description, profile } = data.projects[0];
+  const code = data.projects[0].external;
   const images = (
     <>
       <div className="border-4 border-gray-700 p-2 rounded-lg mr-3">
@@ -82,7 +83,7 @@ const HeroSection = async () => {
   );
   return (
     <div>
-      <div className="grid grid-cols-3 items-stretch gap-6 w-11/12 mx-auto rounded-lg">
+      <div className="grid max-sm:grid-cols-2 grid-cols-3 items-stretch gap-6 w-11/12 mx-auto rounded-lg">
         <div className="mockup-code w-full h-full bg-[#131313] col-span-2">
           <pre data-prefix="$">
             <code>npm install user profile</code>
@@ -159,7 +160,9 @@ const HeroSection = async () => {
                   <p className="text-xl text-gray-400">
                     Core Skills:{" "}
                     <span className="text-xl font-bold text-white">
-                      {/* {data.skills.map((skill) => skill.name).join(", ")} */}
+                      {data.projects[0].core.map((skill, index) => (
+                        <span key={index}>{skill} , </span>
+                      ))}
                     </span>
                   </p>
                 </div>
@@ -176,6 +179,27 @@ const HeroSection = async () => {
           </div>
         </div>
       </div>
+      <div className="card bg-base-300 border border-gray-600 card-sm shadow-sm w-11/12 mx-auto my-5 p-4">
+        <div className="card-body">
+          <div className="flex items-center gap-3">
+            <h2 className="card-title text-5xl font-bold">About Me</h2>
+            <p className="h-0.5 border border-gray-600"></p>
+          </div>
+          <p className="text-xl">
+            I am a passionate and dedicated software developer with a strong
+            foundation in computer science and a keen interest in web
+            development. With a solid understanding of programming languages
+            such as JavaScript, I have honed my skills through various projects
+            . I am particularly enthusiastic about building responsive and
+            user-friendly web applications using modern frameworks like React
+            and Next.js. My experience includes working on both frontend and
+            backend development, allowing me to create seamless and efficient
+            solutions. I am eager to contribute my skills and creativity to a
+            dynamic team, where I can continue to grow as a developer and make a
+            meaningful impact in the tech industry.
+          </p>
+        </div>
+      </div>
       {/* <div className="w-11/12 mx-auto border-t border-b border-gray-700 my-10 py-5 ">
         <Marquee
           className="mask-l-from-90% mask-r-from-90%"
@@ -185,109 +209,54 @@ const HeroSection = async () => {
           {images}
         </Marquee>
       </div> */}
-      <div className="w-11/12 mx-auto grid grid-cols-3 gap-6 text-center my-5">
-        <div>
-          <div className="card bg-base-300 border border-gray-600 card-sm shadow-sm">
+      {/* <div className="w-11/12 mx-auto grid grid-cols-2 gap-6 text-center my-5">
+        {code.map((item, index) => (
+          <div
+            className="card bg-base-300 border border-gray-600 card-sm shadow-sm"
+            key={index}
+          >
             <div className="card-body">
               <Image
-                src={codeforces}
-                alt="codeforces"
+                src={item.image}
+                alt={item.name}
                 width={100}
                 height={100}
                 className="rounded-full border bg-white border-green-600 mx-auto mb-3"
               />
-              <h2 className="card-title text-2xl font-bold">Codeforces</h2>
+              <h2 className="card-title text-2xl font-bold">{item.name}</h2>
               <div className="text-start text-lg">
                 <p>
-                  <span className="font-bold text-gray-400">Rating:</span> 1020
+                  <span className="font-bold text-gray-400">Rating:</span>{" "}
+                  {item.Rating}
                 </p>
                 <p>
                   <span className="font-bold text-gray-400">Max Rating:</span>{" "}
-                  1200
+                  {item.MaxRating}
                 </p>
                 <p>
-                  <span className="font-bold text-gray-400">Rank:</span> Pupil
+                  <span className="font-bold text-gray-400">Rank:</span>{" "}
+                  {item.Rank}
                 </p>
                 <p>
                   <span className="font-bold text-gray-400">
                     Problem Solved:
                   </span>{" "}
-                  350+
+                  {item.ProblemsSolved}
                 </p>
               </div>
               <div className="justify-end card-actions">
-                <button className="btn btn-primary">Visit Profile</button>
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-primary">Visit Profile</button>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div className="card bg-base-300 border border-gray-600 card-sm shadow-sm">
-            <div className="card-body">
-              <Image
-                src={codechef}
-                alt="codechef"
-                width={100}
-                height={100}
-                className="rounded-full border bg-gray-200 border-green-600 mx-auto mb-3"
-              />
-              <h2 className="card-title text-2xl font-bold">CodeChef</h2>
-              <div className="text-start text-lg">
-                <p>
-                  <span className="text-gray-400 font-bold">Rating:</span> 1500
-                </p>
-                <p>
-                  <span className="text-gray-400 font-bold">Max Rating:</span>{" "}
-                  1800
-                </p>
-                <p>
-                  <span className="text-gray-400 font-bold">Rank:</span> Pupil
-                </p>
-                <p>
-                  <span className="text-gray-400 font-bold">
-                    Problem Solved:
-                  </span>{" "}
-                  200+
-                </p>
-              </div>
-              <div className="justify-end card-actions">
-                <button className="btn btn-primary">Visit Profile</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="card h-full bg-base-300 border border-gray-600 card-sm shadow-sm">
-            <div className="card-body h-full">
-              <Image
-                src={github}
-                alt="github"
-                width={100}
-                height={100}
-                className="rounded-full border bg-gray-200 border-green-600 mx-auto mb-3"
-              />
-              <h2 className="card-title text-2xl font-bold">GitHub</h2>
-              <div className="text-start flex-grow text-lg">
-                <p>
-                  <span className="font-bold text-gray-400">
-                    Public Repositories:
-                  </span>{" "}
-                  15
-                </p>
-                <p>
-                  <span className="font-bold text-gray-400">Followers:</span> 50
-                </p>
-                <p>
-                  <span className="font-bold text-gray-400">Following:</span> 30
-                </p>
-              </div>
-              <div className="justify-end card-actions">
-                <button className="btn btn-primary">Visit Profile</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        ))}
+      </div> */}
     </div>
   );
 };

@@ -5,6 +5,11 @@
         "name": "Ashutosh Tanchangya",
         "email":"toshashu123@gmail.com",
         "Experience":0,
+        "core": [
+            "Web Development",
+            "Competitive Programming",
+            "Data Structures and Algorithms"
+        ],
         "Position":"Frontend Developer",
         "description": "A passionate developer with a knack for problem-solving and a love for coding. With a Bachelor's degree in Computer Science and Engineering, I have honed my skills in web development, data structures, and algorithms. I thrive on challenges and am always eager to learn and grow in the ever-evolving world of technology.",
         "skills": [
@@ -61,8 +66,74 @@
                     "Tailwind CSS",
                     "React",
                     "Next.js",                    
-                    "BetterAuth"
+                    "BetterAuth",
+                    "MongoDB Atlas"
                 ]
+            }
+        ],
+        "external":[
+            {
+                "id":1,
+                "image":"https://i.ibb.co.com/XrGtstfG/codeforces.png",
+                "name":"Codeforces",
+                "Rating": 1600,
+                "MaxRating": 1600,
+                "Rank":"Specialist",
+                "ProblemsSolved": 100,
+                "link":"https://codeforces.com/profile/tanchangyaashutosh0356"
+            },
+            {
+                "id":2,
+                "image":"https://i.ibb.co.com/Jj4D0xGN/codechef.png",
+                "name":"codechef",
+                "Rating": 1600,
+                "MaxRating": 1600,
+                "Rank":"Specialist",
+                "ProblemsSolved": 100,
+                "link":"https://www.codechef.com/users/crack_git"
+            }
+            
+        ],
+        "certifications":[
+            {
+                "id":1,
+                "catagory":"Competitive Programming",
+                "name":"IUPC (Inter University Programming Contest)",
+                "session":"2023-2024",
+                "position":"contestant",
+                "image":""
+            },
+            {
+                "id":2,
+                "catagory":"Competitive Programming",
+                "name":"ICPC (International Collegiate Programming Contest)",
+                "session":"2023-2024",
+                "position":"contestant",
+                "image":""
+            },
+            {
+                "id":3,
+                "catagory":"Competitive Programming",
+                "name":"ICPC (International Collegiate Programming Contest)",
+                "session":"2024-2025",
+                "position":"contestant",
+                "image":""
+            },
+            {
+                "id":4,
+                "catagory":"Academic",
+                "name":"PCC Victory Month Contest 2024",
+                "session":"23 December 2024",
+                "position":"3rd place",
+                "image":""
+            },
+            {
+                "id":5,
+                "catagory":"Academic",
+                "name":"PCC Monthly Contest 2025",
+                "session":"30 January 2025",
+                "position":"3rd place",
+                "image":""
             }
         ]
     }
